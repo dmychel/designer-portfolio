@@ -3,15 +3,12 @@
     padding: 0;
 }
 
-body {
+html, body {
     height: 100%;
     background-color: black;
     color: white;
 }
 
-.app {
-
-}
 
 header {
     display: flex;
@@ -93,6 +90,82 @@ header {
         width: 100%;
         img {
             width: 100%;
+        }
+    }
+}
+
+.work {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    margin: auto;
+  
+    .card {
+        background-color: #81F0A6;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        height: 400px;
+        
+        .preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+
+            button {
+                width: fit-content;
+                padding: 5px;
+            }
+        }
+
+        .card_info, .preview {
+            padding: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .work {
+        width: 80%;
+        .card {
+            height: 600px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .preview, .card_info {
+                width: 100%;
+            }
+
+            .preview {
+                height: 60%;
+            }
+
+            .card_info {
+                align-items: flex-start;
+                height: 40%;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 20px;
+                }
+            }
         }
     }
 }
