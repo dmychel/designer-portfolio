@@ -138,6 +138,35 @@ header {
   }
 }
 
+.about {
+  border: 2px solid;
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 24px;
+    border: 2px solid;
+  }
+
+  .photo {
+    border: 1px solid;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
 @media screen and (max-width: 815px) {
   .intro {
     flex-direction: column-reverse;
@@ -156,6 +185,36 @@ header {
       .card_info {
         width: 100%;
         gap: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .about {
+    .text {
+      font-size: 20px;
+    }
+
+    .photo {
+      img {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 696px) {
+  .about {
+    flex-direction: column-reverse;
+
+    .text,
+    .photo {
+      width: 100%;
+      padding: 2.5rem;
+
+      img {
+        width: 100%;
       }
     }
   }
